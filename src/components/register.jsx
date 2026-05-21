@@ -25,6 +25,7 @@ export default function RegisterForm() {
         name: "",
         email: "",
         password: "",
+        confirmPassword: "",
     }
   });
 
@@ -94,6 +95,22 @@ const onSubmit = (data) =>{
               
             />
             {errors.password && <p className="error">{errors.password.message}</p>}
+          </div>
+
+          {/* Confirm Password Input */}
+          <div className="input-group">
+            <div className="password-label-row">
+              <label htmlFor="confirmPassword">Confirm Password</label>
+            </div>
+            <input
+              {...register("confirmPassword")}
+              type="password"
+              id="confirmPassword"
+              placeholder="••••••••"
+            
+              
+            />
+            {errors.confirmPassword && <p className="error">{errors.confirmPassword.message}</p>}
           </div>
 
           {/* Submit Button */}
