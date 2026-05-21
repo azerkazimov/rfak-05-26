@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
 //   const [email, setEmail] = useState('');
@@ -65,7 +66,7 @@ const [formData, setFormData] = useState({
 
         {/* Footer */}
         <div className="login-footer">
-          <p>Don't have an account? <a href="#signup">Create one</a></p>
+          <p>Don't have an account? <Link to="/register">Register</Link></p>
         </div>
       </div>
     </div>

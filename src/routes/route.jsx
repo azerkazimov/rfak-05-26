@@ -2,6 +2,7 @@ import About from "../components/about";
 import Contact from "../components/contact";
 import Home from "../components/home";
 import Login from "../components/login";
+import RegisterForm from "../components/register";
 import UserPage from "../components/user-page";
 import Users from "../components/users";
 import AuthLayout from "../layouts/AuthLayout";
@@ -25,6 +26,7 @@ export const appRoutes = [
     children: [
       { index: true, element: <Home /> },
       { path: "login", element: <Login /> },
+      { path: "register", element: <RegisterForm  /> },
     ],
   },  
 ];
