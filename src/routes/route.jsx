@@ -1,5 +1,6 @@
 import About from "../components/about";
 import Contact from "../components/contact";
+import Counter from "../components/counter";
 import Home from "../components/home";
 import Login from "../components/login";
 import RegisterForm from "../components/register";
@@ -18,6 +19,8 @@ export const appRoutes = [
       { path: "contact", element: <Contact /> },
       { path: "users", element: <Users /> },
       { path: "users/:id", element: <UserPage /> },
+      { path: "rufatin-sehifesi", element: <Counter /> },
+      
     ],
   },
   {
