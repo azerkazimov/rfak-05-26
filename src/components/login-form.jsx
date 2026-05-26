@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../hooks/use-theme";
 
 export default function LoginForm() {
 //   const [email, setEmail] = useState('');
 //   const [password, setPassword] = useState('');
+const {theme} = useTheme();
 
 const [formData, setFormData] = useState({
     email: '',
@@ -19,7 +21,7 @@ const [formData, setFormData] = useState({
   };
 
   return (
-    <div className="login-wrapper">
+    <div className={`login-wrapper ${theme === "dark" ? "dark" : "light"}`}>
       <div className="login-card">
         {/* Header */}
         <div className="login-header">

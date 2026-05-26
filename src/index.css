@@ -3,16 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
   margin: 0;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
 }
 
 img,
@@ -61,6 +53,21 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.app {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Container layout setup */
@@ -218,6 +225,14 @@ p {
 /* Login form styles */
 
 /* Centering the card on the viewport */
+.dark .login-wrapper {
+  background-color: #111827;
+}
+
+.light .login-wrapper {
+  background-color: #f3f4f6;
+}
+
 .login-wrapper {
   background-color: #f3f4f6;
   min-height: 100vh;

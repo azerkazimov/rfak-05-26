@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 import useMobile from "../hooks/use-mobile";
 import MobileNav from "./mobile-nav";
+import { useTheme } from "../hooks/use-theme";
 
 export default function Navbar() {
   const isMobile = useMobile();
-  
+  const { toggleTheme } = useTheme();
+
+
   if(isMobile){
     return <MobileNav />;
+  }
+
+  const handleToggleTheme = () => {
+    toggleTheme();
   }
 
   return (
@@ -28,6 +35,10 @@ export default function Navbar() {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
+
+          {/* Theme toggle button */}
+          <button onClick={handleToggleTheme}>Toggle Theme</button>
+
           <Link to="/login">Login</Link>
         </div>
       </nav>
