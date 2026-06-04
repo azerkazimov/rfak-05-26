@@ -6,11 +6,13 @@ import { persist } from "zustand/middleware";
 export const useTodoListStore = create(
   persist(
     (set) => ({
-      tasks: [],
+      tasks: [], // ['asdadasd','dasdadsad','dasdasdas']
       addTask: (task) =>
         set((state) => ({ tasks: [...state.tasks, task] })),
       deleteTask: (task) =>
         set((state) => ({ tasks: state.tasks.filter((t) => t !== task) })),
+        // updateTask: (task, newTask) =>
+        // dragTask: (task, newIndex) =>
     }),
     {
       name: "todo-tasks",
