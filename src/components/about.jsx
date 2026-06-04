@@ -1,11 +1,7 @@
-import { useState } from "react";
-import Button from "./button";
+
+import Count from "./count";
 
 export default function About() {
-  const [count, setCount] = useState(1);
-
-  const handleIncrement = () => setCount(count + 1);
-
   // ==============================
   // console.log('1: Sinxron kod');  // sync code
 
@@ -18,14 +14,17 @@ export default function About() {
   // });
 
   // console.log('4: Sinxron kod');  // sync code
+
+
+
   
 
 
   return (
     <div style={{ padding: "20px" }}>
       <h1>About</h1>
-      <Button onClick={handleIncrement}>Increment</Button>
-      <p>Count: {count}</p>
+      
+      <Count />
     </div>
   );
 }

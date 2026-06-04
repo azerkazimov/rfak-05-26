@@ -1,11 +1,15 @@
 // import { useEffect, useState } from "react";
+// import { useQuery } from "@tanstack/react-query";
 import { useUsers } from "../services/user.service";
+import Count from "./count";
+
 import Counter from "./counter";
 import Loading from "./loading";
 
 
 export default function Contact() {
   // const [users, setUsers] = useState([]);
+
 
   // useEffect(() => {
   //   fetch('https://api.github.com/users')
@@ -21,16 +25,22 @@ export default function Contact() {
   //   queryFn: () => fetch('https://api.github.com/users').then(response => response.json())
   // })
 
-  const {data: users, isLoading, isError, error} = useUsers();
+
+
+  const { data: users, isLoading, isError, error } = useUsers();
 
   if (isLoading) return <Loading />;
   if (isError) return <div>Error: {error.message}</div>;
 
   return (
     <>
+      <Count />
+      
+
+
       <h1>Contact</h1>
       <Counter />
-      {users.map(user => (
+      {users.map((user) => (
         <div key={user.id}>
           <h2>{user.login}</h2>
           <img src={user.avatar_url} alt={user.login} />

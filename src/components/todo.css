@@ -1,0 +1,68 @@
+.todo {
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 0.75rem;
+}
+
+.todo input {
+  grid-column: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0.375rem;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  outline: none;
+}
+
+.todo input:focus {
+  border-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.todo input::placeholder {
+  opacity: 0.45;
+}
+
+.todo button {
+  grid-column: 2;
+  padding: 0.5rem 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0.375rem;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  font-size: 0.875rem;
+  transition: background 0.15s ease;
+}
+
+.todo button:hover {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.todo ul {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.todo li {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.task-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
